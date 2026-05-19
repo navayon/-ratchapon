@@ -1,0 +1,16 @@
+# Procfile — Process declarations for Railway, Heroku, and compatible platforms
+# Each line defines a process type: <name>: <command>
+
+# ── Web process (required) ────────────────────────────────────────────────────
+# The platform starts this process and routes HTTP traffic to $PORT
+web: gunicorn myproject.wsgi:application --bind 0.0.0.0:$PORT --config gunicorn.conf.py
+
+# ── Release phase (runs once before web starts on every deploy) ───────────────
+# Ideal for migrations — runs before traffic is sent to the new version
+release: python manage.py migrate --no-input
+
+# ── (Optional) Celery worker — uncomment when you add Celery ─────────────────
+# worker: celery -A myproject worker --loglevel=info
+
+# ── (Optional) Celery beat scheduler ─────────────────────────────────────────
+# clock: celery -A myproject beat --loglevel=info

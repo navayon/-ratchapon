@@ -1,0 +1,30 @@
+# Django & Python
+.env
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+
+# Django runtime files
+db.sqlite3
+media/
+staticfiles/
+
+# IDE
+.vscode/settings.json
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Coverage
+.coverage
+htmlcov/
+
+
+#Ignore vscode AI rules
+.github/instructions/codacy.instructions.md

@@ -1,0 +1,54 @@
+### Module 11 — API Test Requests
+### Save as api_tests.http and use VS Code REST Client extension
+
+@base_url = http://127.0.0.1:8000/api
+@admin_user = admin
+@admin_pass = adminpass123
+
+### ── Posts ────────────────────────────────────────────
+
+### List all posts
+GET {{base_url}}/posts/
+Accept: application/json
+
+###
+
+### Get a single post
+GET {{base_url}}/posts/1/
+Accept: application/json
+
+###
+
+### Create a new post (authenticated)
+POST {{base_url}}/posts/
+Content-Type: application/json
+Authorization: Basic {{admin_user}}:{{admin_pass}}
+
+{
+  "title": "My API Post",
+  "body": "This post was created via the REST API.",
+  "status": "published"
+}
+
+###
+
+### Update a post
+PATCH {{base_url}}/posts/1/
+Content-Type: application/json
+Authorization: Basic {{admin_user}}:{{admin_pass}}
+
+{
+  "title": "Updated Title via PATCH"
+}
+
+###
+
+### Delete a post
+DELETE {{base_url}}/posts/1/
+Authorization: Basic {{admin_user}}:{{admin_pass}}
+
+###
+
+### Get comments for a post (custom action)
+GET {{base_url}}/posts/1/comments/
+Accept: application/json

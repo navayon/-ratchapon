@@ -1,0 +1,42 @@
+[
+  {
+    "model": "blog.category",
+    "pk": 1,
+    "fields": {
+      "name": "Django",
+      "slug": "django"
+    }
+  },
+  {
+    "model": "blog.category",
+    "pk": 2,
+    "fields": {
+      "name": "Python",
+      "slug": "python"
+    }
+  },
+  {
+    "model": "blog.category",
+    "pk": 3,
+    "fields": {
+      "name": "REST API",
+      "slug": "rest-api"
+    }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 1,
+    "fields": {
+      "name": "tutorial",
+      "slug": "tutorial"
+    }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 2,
+    "fields": {
+      "name": "beginner",
+      "slug": "beginner"
+    }
+  }
+]
