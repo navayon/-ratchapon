@@ -1,4 +1,4 @@
-# Module 01 — Introduction to Django
+ยั# Module 01 — Introduction to Django
 
 ## Learning Objectives
 - Understand what Django is and where it fits in web development
